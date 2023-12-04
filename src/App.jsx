@@ -18,22 +18,22 @@ import {
 } from "@dnd-kit/sortable";
 import { IoMdImages } from "react-icons/io";
 import SortableItem from "./components/SortableItem";
+import gallery from "./assets/gallery";
 
 function App() {
   const [galleryImageList, setGalleryImageList] = useState([]);
   const [selectedImageCount, setSelectedImageCount] = useState(0);
-  const [activeId, setActiveId] = useState(false);
-  // console.log(galleryImageList);
 
   useEffect(() => {
     axios
-      .get("../imageGallery.json")
+      .get("./imageGallery.json")
       .then((res) => setGalleryImageList(res.data))
       .catch((error) => console.log(error));
+    // setGalleryImageList(gallery.images);
   }, []);
 
   const handleSelectCheckBox = (id) => {
-    console.log("handleSelectCheckBox", id);
+    // console.log("handleSelectCheckBox", id);
     const updatedGalleryImageList = galleryImageList.map((item) =>
       item.id === id ? { ...item, selected: !item.selected } : item
     );

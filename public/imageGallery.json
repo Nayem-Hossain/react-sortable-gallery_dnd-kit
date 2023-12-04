@@ -1,57 +1,64 @@
 [
     {
         "id": "1",
-        "img": "../src/assets/images/image-11.jpeg",
+        "img": "https://i.ibb.co/BVbWDH5/image-11.jpg",
         "selected": false
     },
     {
         "id": "2",
-        "img": "../src/assets/images/image-10.jpeg",
+        "img": "https://i.ibb.co/rsyRpbP/image-10.jpg",
         "selected": false
     },
     {
         "id": "3",
-        "img": "../src/assets/images/image-9.webp",
+        "img": "https://i.ibb.co/1zP9y24/image-9.webp",
         "selected": false
     },
     {
         "id": "4",
-        "img": "../src/assets/images/image-8.webp",
+        "img": "https://i.ibb.co/8z4QWRb/image-8.webp",
         "selected": false
     },
     {
         "id": "5",
-        "img": "../src/assets/images/image-7.webp",
+        "img": "https://i.ibb.co/601vnnZ/image-7.webp",
         "selected": false
     },
     {
         "id": "6",
-        "img": "../src/assets/images/image-6.webp",
+        "img": "https://i.ibb.co/DfdYTDT/image-6.webp",
         "selected": false
     },
     {
         "id": "7",
-        "img": "../src/assets/images/image-5.webp",
+        "img": "https://i.ibb.co/KxjwQFK/image-5.webp",
         "selected": false
     },
     {
         "id": "8",
-        "img": "../src/assets/images/image-4.webp",
+        "img": "https://i.ibb.co/G7GC5D4/image-4.webp",
         "selected": false
     },
     {
         "id": "9",
-        "img": "../src/assets/images/image-3.webp",
+        "img": "https://i.ibb.co/wr1Fs5L/image-3.webp",
         "selected": false
     },
     {
         "id": "10",
-        "img": "../src/assets/images/image-2.webp",
+        "img": "https://i.ibb.co/48sLkx4/image-2.webp",
         "selected": false
     },
     {
         "id": "11",
-        "img": "../src/assets/images/image-1.webp",
+        "img": "https://i.ibb.co/FqZbc83/image-1.webp",
         "selected": false
     }
 ]
+
+
+
+
+
+
+

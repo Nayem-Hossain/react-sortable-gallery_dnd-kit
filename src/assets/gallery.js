@@ -1,4 +1,4 @@
-const gallery = [
+const images = [
     {
       id: "1",
       img: "../src/assets/images/image-11.jpeg"
@@ -45,4 +45,4 @@ const gallery = [
     }
   ]
 
-  export default {gallery};
+  export default {images};
