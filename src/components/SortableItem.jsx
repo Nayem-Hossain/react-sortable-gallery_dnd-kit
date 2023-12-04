@@ -2,7 +2,7 @@ import React from "react";
 import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 
-const SortableItem = ({ item, index, handleSelectCheckBox}) => {
+const SortableItem = ({ item, index, handleSelectCheckBox }) => {
   const { attributes, listeners, setNodeRef, transform, transition } =
     useSortable({ id: item.id });
 
@@ -10,7 +10,7 @@ const SortableItem = ({ item, index, handleSelectCheckBox}) => {
     transform: CSS.Transform.toString(transform),
     transition,
   };
-
+ 
   return (
     <div
       ref={setNodeRef}
@@ -28,8 +28,6 @@ const SortableItem = ({ item, index, handleSelectCheckBox}) => {
           onChange={() => handleSelectCheckBox(item.id)}
           checked={item.selected}
           type="checkbox"
-          name=""
-          id=""
           className="image-checkbox"
         />
       </div>

@@ -15,9 +15,8 @@ import {
   arrayMove,
   SortableContext,
   sortableKeyboardCoordinates,
-  verticalListSortingStrategy,
 } from "@dnd-kit/sortable";
-
+import { IoMdImages } from "react-icons/io";
 import SortableItem from "./components/SortableItem";
 
 function App() {
@@ -67,7 +66,12 @@ function App() {
       });
     }
   };
-
+  const sensors = useSensors(
+    useSensor(PointerSensor, { activationConstraint: { distance: 5 } }),
+    useSensor(KeyboardSensor, {
+      coordinateGetter: sortableKeyboardCoordinates,
+    })
+  );
   return (
     <div className="h-screen">
       <div className="mx-4 border-b-2 border-gray-400 py-4">
@@ -91,7 +95,11 @@ function App() {
         )}
       </div>
 
-      <DndContext onDragEnd={handleOnDragEnd}>
+      <DndContext
+        collisionDetection={closestCenter}
+        onDragEnd={handleOnDragEnd}
+        sensors={sensors}
+      >
         <SortableContext items={galleryImageList}>
           <div className="absolute grid grid-cols-5 mx-4 my-4 gap-10">
             {galleryImageList.map((item, index) => {
@@ -104,9 +112,28 @@ function App() {
                 />
               );
             })}
+            <div className="">
+              <label className="flex cursor-pointer appearance-none items-center justify-center rounded-md border-2 border-dashed border-gray-200 transition-all hover:border-primary-300 bg-gray-100">
+                <div className="space-y-1 text-center p-6 h-full">
+                  <div className="flex items-center justify-center">
+                    <IoMdImages className="w-20 h-20" />
+                  </div>
+                  <div className="text-gray-600 p-4">
+                    <a
+                      href="#"
+                      className="font-medium text-primary-500 hover:text-primary-700 mr-2"
+                    >
+                      Add image
+                    </a>
+                    or drag and drop
+                  </div>
+                  <p className="text-sm text-gray-500">SVG, PNG, JPG or GIF</p>
+                </div>
+                <input id="add-image" type="file" className="sr-only" />
+              </label>
+            </div>
           </div>
         </SortableContext>
-        {/* <DragOverlay>{activeId ? <Item id={activeId} /> : false}</DragOverlay> */}
       </DndContext>
     </div>
   );
